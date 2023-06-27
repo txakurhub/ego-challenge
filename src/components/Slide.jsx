@@ -52,8 +52,8 @@ const Slide = ({ data }) => {
           </div>
         </SwiperSlide>
       ))}
-      <div className="hidden opacity-30 bg-white left-0 h-[23.2rem] w-32 md:absolute bottom-0 z-10"></div>
-      <div className="hidden opacity-30 bg-white right-0 h-[23.2rem] w-32 md:absolute bottom-0 z-10"></div>
+      <div className="hidden md:flex opacity-30 bg-white left-0 h-[23.2rem] w-32 absolute bottom-0 z-10"></div>
+      <div className="hidden md:flex opacity-30 bg-white right-0 h-[23.2rem] w-32 absolute bottom-0 z-10"></div>
     </Swiper>
   );
 };
