@@ -2,7 +2,6 @@ import { useState } from "react";
 
 const Filter = ({ segment, setSegment }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -12,11 +11,11 @@ const Filter = ({ segment, setSegment }) => {
     toggleMenu();
   };
   return (
-    <div className="relative inline-block text-left w-5/12">
-      <div>
+    <div className="relative inline-block text-left w-5/12 lg:w-full">
+      <div className="lg:hidden">
         <button
           type="button"
-          className="inline-flex justify-start w-full font-bold  pl-2 ml-2 py-2 bg-white text-xs"
+          className="inline-flex justify-start w-full font-bold pl-2 ml-2 py-2 bg-white text-xs lg:text-xl"
           id="dropdown-menu"
           aria-expanded={isOpen ? "true" : "false"}
           onClick={toggleMenu}
@@ -31,7 +30,7 @@ const Filter = ({ segment, setSegment }) => {
       </div>
       {isOpen && (
         <div
-          className="absolute left-0 mt-2 w-full ml-2 rounded-md shadow-lg bg-white text-[10px] pl-2"
+          className="absolute left-0 mt-2 w-full ml-2 rounded-md shadow-lg bg-white text-[10px] pl-2 lg:text-xl"
           role="menu"
           aria-orientation="vertical"
         >
@@ -79,6 +78,44 @@ const Filter = ({ segment, setSegment }) => {
           </div>
         </div>
       )}
+      {/* 1024 */}
+      <div className="hidden lg:flex flex-row gap-10 text-xl w-full">
+        <h4 className="font-bold py-2 bg-white">Filtrar por</h4>
+        <div className="flex flex-row gap-14 w-10/12 px-5">
+          <button
+            className={`${
+              segment === "Todos" && "bg-selected rounded-full"
+            } px-5`}
+            onClick={() => setSegment("Todos")}
+          >
+            Todos
+          </button>
+          <button
+            className={`${
+              segment === "Autos" && "bg-selected rounded-full"
+            } px-5`}
+            onClick={() => setSegment("Autos")}
+          >
+            Autos
+          </button>
+          <button
+            className={`${
+              segment === "Pickups y Comerciales" && "bg-selected rounded-full"
+            } px-5`}
+            onClick={() => setSegment("Pickups y Comerciales")}
+          >
+            Pickups y Comerciales
+          </button>
+          <button
+            className={`${
+              segment === "SUVs" && "bg-selected rounded-full"
+            } px-5`}
+            onClick={() => setSegment("SUVs")}
+          >
+            SUVs y Crossovers
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

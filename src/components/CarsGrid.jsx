@@ -4,7 +4,7 @@ import SkeletonCard from "./SkeletonCard";
 import CarCard from "./CarCard";
 import Filter from "./Filter";
 import Sort from "./Sort";
-const CarsGrid = () => {
+const CarsGrid = ({ setSection }) => {
   const [segment, setSegment] = useState("Todos");
   const [sorted, setSorted] = useState("");
   const { carsData, getCarsData } = useCarsData();
@@ -30,7 +30,9 @@ const CarsGrid = () => {
     if (segment === "Pickups y Comerciales") {
       filteredCarsData = carsData.filter((car) => car?.segment === segment);
     } else if (segment === "SUVs") {
-      filteredCarsData = carsData.filter((car) => car?.segment === segment);
+      filteredCarsData = carsData.filter(
+        (car) => car?.segment === "SUVs" || car?.segment === "Crossovers"
+      );
     } else if (segment !== "Todos") {
       filteredCarsData = carsData.filter(
         (car) =>
@@ -41,37 +43,44 @@ const CarsGrid = () => {
     let sortedCarsData = filteredCarsData;
 
     if (sorted === "cheapest") {
-      sortedCarsData = filteredCarsData.slice().sort((a, b) => a.price - b.price);
+      sortedCarsData = filteredCarsData
+        .slice()
+        .sort((a, b) => a.price - b.price);
     } else if (sorted === "expensive") {
-      sortedCarsData = filteredCarsData.slice().sort((a, b) => b.price - a.price);
+      sortedCarsData = filteredCarsData
+        .slice()
+        .sort((a, b) => b.price - a.price);
     } else if (sorted === "older") {
       sortedCarsData = filteredCarsData.slice().sort((a, b) => b.year - a.year);
     } else if (sorted === "newer") {
       sortedCarsData = filteredCarsData.slice().sort((a, b) => a.year - b.year);
     }
-
     setFilteredData(sortedCarsData);
   };
 
-  console.log(segment);
-  console.log(filteredData);
   return (
-    <section className="w-full h-full">
-      <div className="w-full flex justify-between px-1">
+    <section className="w-full py-5 lg:w-11/12 h-full mx-auto lg:px-5">
+      <div className="w-full flex justify-between mx-auto">
         <Filter segment={segment} setSegment={setSegment} />
         <Sort sorted={sorted} setSorted={setSorted} />
       </div>
-      {filteredData
-        ? filteredData.map((c, i) => (
-            <CarCard
-              name={c?.name}
-              year={c?.year}
-              price={c?.price}
-              img={c?.thumbnail}
-              key={i}
-            />
-          ))
-        : loading.map((n, i) => <SkeletonCard key={i} />)}
+      <div className="w-11/12 h-[2px] bg-line self-center mx-auto mb-5 lg:hidden"></div>
+      <div className="hidden lg:block w-full h-[3px] bg-line self-center mx-auto mb-5 "></div>
+      <div className="lg:grid lg:grid-cols-4 gap-2 items-start py-10">
+        {filteredData
+          ? filteredData.map((c, i) => (
+              <CarCard
+                name={c?.name}
+                year={c?.year}
+                price={c?.price}
+                img={c?.thumbnail}
+                key={i}
+                id={c?.id}
+                setSection={setSection}
+              />
+            ))
+          : loading.map((n, i) => <SkeletonCard key={i} />)}
+      </div>
     </section>
   );
 };

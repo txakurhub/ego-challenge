@@ -9,3 +9,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
+
+.burger h4:hover {
+  transition: 300ms;
+  font-weight: 600;
+  cursor: pointer;
+}

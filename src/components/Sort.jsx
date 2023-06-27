@@ -12,26 +12,26 @@ const Sort = ({ sorted, setSorted }) => {
     toggleMenu();
   };
   return (
-    <div className="relative inline-block text-left w-5/12">
+    <div className="relative inline-block text-left w-5/12 z-30">
       <div>
         <button
           type="button"
-          className="inline-flex justify-end w-full font-bold pr-2 mr-2 py-2 bg-white text-xs"
+          className="inline-flex justify-end w-full font-bold pr-2 mr-2 py-2 bg-white text-xs lg:text-xl"
           id="dropdown-menu"
           aria-expanded={isOpen ? "true" : "false"}
           onClick={toggleMenu}
         >
           Ordenar por
           {isOpen ? (
-            <p className="rotate-90 px-2 w-10 -scale-y-150 ">{` >`}</p>
+            <p className="rotate-90 px-2 w-10 -scale-y-150 duration-300">{` >`}</p>
           ) : (
-            <p className="rotate-90 px-2 w-10 -scale-y-150 ">{` <`}</p>
+            <p className="rotate-90 px-2 w-10 -scale-y-150 duration-300">{` <`}</p>
           )}
         </button>
       </div>
       {isOpen && (
         <div
-          className="absolute left-0 mt-2 w-full mr-2 rounded-md shadow-lg bg-white text-[10px] pr-2"
+          className="absolute left-0 mt-2 w-full mr-2 rounded-md shadow-lg bg-white text-[10px] pr-2 lg:text-xl duration-300"
           role="menu"
           aria-orientation="vertical"
         >

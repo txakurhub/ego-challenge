@@ -1,29 +1,35 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../assets/Logo.svg";
 import x from "../assets/x.svg";
-const Navbar = () => {
+import { useNavigate } from "react-router-dom";
+const Navbar = ({ section, setSection }) => {
   const [active, setActive] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
-
+  const navigate = useNavigate();
+  useEffect(() => {
+    section === 0 ? setActive(true) : setActive(false);
+  }, [section]);
   return (
-    <nav className="flex flex-row border-[1px] border-line justify-between items-center px-3 h-16 relative">
-      <div className="">
-        <div className="">
-          <img src={logo} alt="logo" />
-        </div>
-        <div className="hidden lg:flex">
+    <nav className="flex flex-row  justify-between items-center px-3 h-16 relative">
+      <div className="flex flex-row gap-5 border-b-2 border-line w-full">
+        <img src={logo} alt="logo" className="mr-10" />
+        <div className="hidden lg:flex flex-row gap-10 items-end">
           <button
-            className={`${active ? "border-b-4" : "border-b-0"} `}
+            className={`${
+              active ? "border-active text-active" : "border-transparent"
+            } text-xl border-b-4 py-3`}
             onClick={(e) => {
-              e.preventDefault(), setActive(true);
+              e.preventDefault(), setActive(true), setSection(0), navigate("/");
             }}
           >
             Modelos
           </button>
           <button
-            className={`${!active ? "border-b-4" : "border-b-0"}`}
+            className={`${
+              !active ? "border-active text-active" : "border-transparent"
+            } text-xl border-b-4 py-3`}
             onClick={(e) => {
-              e.preventDefault(), setActive(false);
+              e.preventDefault(), setActive(false), setSection(1);
             }}
           >
             Ficha de modelo
@@ -32,13 +38,13 @@ const Navbar = () => {
       </div>
 
       {/* Botón hamburguesa */}
-      <div className="lg:hidden w-6/4" onClick={() => setIsOpen(!isOpen)}>
+      <div className="z-50 w-6/4" onClick={() => setIsOpen(!isOpen)}>
         <div className={`bg-black w-[28px] h-[2.86px] mt-1.5`}></div>
         <div className={`bg-black w-[28px] h-[2.86px] mt-1.5`}></div>
         <div className={`bg-black w-[28px] h-[2.86px] mt-1.5`}></div>
         {/* Menú hamburguesa */}
         <div
-          className={`lg:hidden flex flex-col text-lg items-end justify-end w-full bg-white text-black duration-400 absolute top-16 right-0 px-5 ${
+          className={`flex flex-col text-lg items-end justify-end w-96 burger bg-white text-black duration-400 absolute top-16 right-0 px-5 ${
             isOpen ? "opacity-100" : "hidden opacity-0"
           }`}
         >
