@@ -18,11 +18,11 @@ const Navbar = () => {
     <nav className="flex flex-row justify-between items-center h-16 relative border-b-2 border-line">
       <div className="flex flex-row gap-5 w-full">
         <img src={logo} alt="logo" className="mr-5 px-2 lg:ml-5" />
-        <div className="hidden lg:flex flex-row gap-10 items-end">
+        <div className="hidden lg:flex flex-row gap-14 items-end px-10 font-bold">
           <button
             className={`${
               active
-                ? "border-active text-active font-bold"
+                ? "border-active text-active "
                 : "border-transparent"
             } text-xl border-b-4 py-3 mt-2`}
             onClick={(e) => {

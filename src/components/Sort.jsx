@@ -31,7 +31,7 @@ const Sort = ({ sorted, setSorted }) => {
       </div>
       {isOpen && (
         <div
-          className="absolute left-0 mt-2 w-full mr-2 rounded-md shadow-lg bg-white text-[10px] pr-2 lg:text-xl duration-300"
+          className="absolute left-0 mt-2 w-full mr-2 rounded-md shadow-lg bg-white text-[10px] pr-2 lg:text-xl duration-300 shadow-xl"
           role="menu"
           aria-orientation="vertical"
         >

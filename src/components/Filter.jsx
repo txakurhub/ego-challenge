@@ -30,7 +30,7 @@ const Filter = ({ segment, setSegment }) => {
       </div>
       {isOpen && (
         <div
-          className="absolute left-0 mt-2 w-full ml-2 rounded-md shadow-lg bg-white text-[10px] pl-2 lg:text-xl"
+          className="absolute left-0 mt-2 w-full ml-2 rounded-md shadow-lg bg-white text-[10px] pl-2 lg:text-xl shadow-xl"
           role="menu"
           aria-orientation="vertical"
         >
