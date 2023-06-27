@@ -17,7 +17,6 @@ export const CarsDataProvider = ({ children }) => {
     setIsLoading(true);
     try {
       const { data } = await axios.get(`${URL_MODELS}`);
-      console.log(data);
       setCarsData(data);
       setErrors(null);
       setIsLoading(false);

@@ -21,7 +21,7 @@ const CarsGrid = () => {
 
   return (
     <section className="w-full h-full">
-      <div className="w-full flex justify-between">
+      <div className="w-full flex justify-between px-1">
         <Filter segment={segment} setSegment={setSegment} />
         <Sort sorted={sorted} setSorted={setSorted} />
       </div>

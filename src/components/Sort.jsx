@@ -15,7 +15,7 @@ const Sort = ({ sorted, setSorted }) => {
       <div>
         <button
           type="button"
-          className="inline-flex justify-end w-full font-bold rounded-md border border-gray-300 shadow-sm  pr-2 mr-2 py-2 bg-white text-xs hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+          className="inline-flex justify-end w-full font-bold pr-2 mr-2 py-2 bg-white text-xs"
           id="dropdown-menu"
           aria-expanded={isOpen ? "true" : "false"}
           onClick={toggleMenu}
