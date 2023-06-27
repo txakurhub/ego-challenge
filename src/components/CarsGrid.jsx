@@ -7,26 +7,37 @@ import Sort from "./Sort";
 const CarsGrid = ({ setSection }) => {
   const [segment, setSegment] = useState("Todos");
   const [sorted, setSorted] = useState("newer");
-  const { carsData, getCarsData, isLoading } = useCarsData();
+  const { carsData, getCarsData, isLoading, setCarDetail } = useCarsData();
   const loading = [1, 2, 3, 4, 5, 6, 7, 8];
   const [filteredData, setFilteredData] = useState([]);
   const [isLoadingData, setIsLoadingData] = useState(true);
-
   let data = carsData;
+
+  const resetCarData = () => {
+    setCarDetail(null);
+  };
+  useEffect(() => {
+    resetCarData();
+  }, []);
+
   useEffect(() => {
     const fetchData = async () => {
       if (!carsData) {
-        setIsLoadingData(true); // Establecer isLoadingData a true durante la carga
+        setIsLoadingData(true);
         await getCarsData();
-        setIsLoadingData(false); // Establecer isLoadingData a false una vez que los datos se carguen
+        setIsLoadingData(false);
       }
     };
     fetchData();
-  }, [carsData, getCarsData]);
+  }, [carsData, getCarsData, setIsLoadingData]);
 
   useEffect(() => {
     filterAndSortData();
   }, [segment, sorted]);
+
+  useEffect(() => {
+    setIsLoadingData(false);
+  }, [setIsLoadingData]);
 
   const filterAndSortData = () => {
     if (!carsData) return;

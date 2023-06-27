@@ -44,6 +44,7 @@ export const CarsDataProvider = ({ children }) => {
       value={{
         carsData,
         carDetail,
+        setCarDetail,
         isLoading,
         errors,
         getCarsData,

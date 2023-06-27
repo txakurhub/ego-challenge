@@ -16,7 +16,7 @@ const CarCard = ({ name, year, price, img, id }) => {
   };
   return (
     <article
-      className="w-full h-full flex flex-col items-center mb-4 relative duration-300"
+      className="w-full h-full flex flex-col items-center mb-5 relative duration-300"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

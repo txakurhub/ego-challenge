@@ -48,7 +48,7 @@ const Model = () => {
         title={title}
       />
       <Slide data={slideData} />
-      <div className="flex items-center justify-center flex-col gap-5 py-20">
+      <div className="flex items-center justify-center flex-col gap-5 py-20 mb-10">
         {model_highlights?.map((m, i) => (
           <Highlights data={m} key={i} side={i % 2} />
         ))}
