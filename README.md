@@ -57,9 +57,6 @@ Después de realizar una búsqueda, el sistema debe mostrar una lista de automó
 En la página de detalles, el sistema debe mostrar la información completa del automóvil, incluyendo la imagen de alta resolución.
 El sistema debe proporcionar una interfaz de usuario intuitiva y receptiva para una experiencia de usuario fluida.
 
-### 5. Validaciones y Restricciones
-Los criterios de búsqueda deben cumplir con las restricciones de formato y longitud especificadas.
-Los datos de automóviles deben validarse para garantizar su integridad y consistencia.
 
-### 6. Escenarios de Error
+### 5. Escenarios de Error
 Si no se encuentra ningún automóvil, el sistema muestra una tarjeta de carga para indicar visualmente que se está intentando cargar los datos.
