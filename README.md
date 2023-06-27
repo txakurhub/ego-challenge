@@ -40,31 +40,31 @@ $ npm run dev
 ## Ficha Técnica de Comportamientos
 Esta ficha técnica de comportamientos describe los diferentes comportamientos y funcionalidades del proyecto realizado para Ego-Challenge. Proporciona una guía detallada sobre las acciones que los usuarios pueden realizar y cómo el sistema debe responder a esas acciones.
 
-# 1. Descripción general
+### 1. Descripción general
 El proyecto Ego-Challenge es una aplicación web que permite a los usuarios ver y explorar sobre una colección de automóviles. Los usuarios pueden ver información detallada de cada automóvil, incluyendo su nombre, una descripción, año de fabricación, precio, una imagen representativa, features y highlights.
 
-# 2. Casos de Uso
+### 2. Casos de Uso
 Caso de Uso 1: Búsqueda de Automóviles
 El usuario puede filtrar automóviles por tipo de vehículo como autos, pickups y comerciales, y SUVs y crossovers.
 El sistema debe mostrar los resultados de la búsqueda de manera dinámica a medida que el usuario ingresa los criterios de ordenamiento y filtros.
 
-# Caso de Uso 2: Visualización de Detalles del Automóvil
+### Caso de Uso 2: Visualización de Detalles del Automóvil
 El usuario puede hacer clic en un automóvil en la lista para ver información detallada.
 El sistema debe mostrar una página de detalles con todos los atributos del automóvil, incluyendo la imagen de alta resolución.
 
-# 3. Interacciones del Usuario
+### 3. Interacciones del Usuario
 El usuario puede seleccionar filtros específicos, como segmento, precio o año, para refinar los resultados de búsqueda.
 El usuario puede hacer clic en un automóvil en la lista para ver los detalles completos.
 El usuario puede regresar a la página principal desde la página de detalles.
 
-# 4. Respuestas del Sistema
+### 4. Respuestas del Sistema
 Después de realizar una búsqueda, el sistema debe mostrar una lista de automóviles que coinciden con los criterios de búsqueda.
 En la página de detalles, el sistema debe mostrar la información completa del automóvil, incluyendo la imagen de alta resolución.
 El sistema debe proporcionar una interfaz de usuario intuitiva y receptiva para una experiencia de usuario fluida.
 
-# 5. Validaciones y Restricciones
+### 5. Validaciones y Restricciones
 Los criterios de búsqueda deben cumplir con las restricciones de formato y longitud especificadas.
 Los datos de automóviles deben validarse para garantizar su integridad y consistencia.
 
-# 6. Escenarios de Error
+### 6. Escenarios de Error
 Si no se encuentra ningún automóvil, el sistema muestra una tarjeta de carga para indicar visualmente que se está intentando cargar los datos.
