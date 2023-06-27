@@ -40,9 +40,9 @@ const Slide = ({ data }) => {
           <img
             src={car.image}
             alt={car.name}
-            className="mb-5 w-[294px] rounded-xl"
+            className="mb-5 w-[250px] lg:w-[294px] rounded-xl"
           />
-          <div className="w-[294px]">
+          <div className="w-[250px] lg:w-[294px]">
             <h4 className="text-xl font-semibold mb-4">{car.name}</h4>
             <p className="text-md font-light">
               {removeHTMLTags(car.description).length > 90

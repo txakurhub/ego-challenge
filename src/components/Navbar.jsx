@@ -15,13 +15,15 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className="flex flex-row  justify-between items-center px-3 h-16 relative">
-      <div className="flex flex-row gap-5 border-b-2 border-line w-full">
-        <img src={logo} alt="logo" className="mr-10" />
+    <nav className="flex flex-row justify-between items-center h-16 relative border-b-2 border-line">
+      <div className="flex flex-row gap-5 w-full">
+        <img src={logo} alt="logo" className="mr-10 px-2" />
         <div className="hidden lg:flex flex-row gap-10 items-end">
           <button
             className={`${
-              active ? "border-active text-active font-bold" : "border-transparent"
+              active
+                ? "border-active text-active font-bold"
+                : "border-transparent"
             } text-xl border-b-4 py-3`}
             onClick={(e) => {
               e.preventDefault(), setActive(true), navigate("/");
@@ -31,7 +33,9 @@ const Navbar = () => {
           </button>
           <button
             className={`${
-              !active ? "border-active text-active font-bold" : "border-transparent"
+              !active
+                ? "border-active text-active font-bold"
+                : "border-transparent"
             } text-xl border-b-4 py-3`}
             onClick={(e) => {
               e.preventDefault(), setActive(false), navigate("/model/1");
@@ -44,9 +48,14 @@ const Navbar = () => {
 
       {/* Botón hamburguesa */}
       <div className="z-50 w-6/4" onClick={() => setIsOpen(!isOpen)}>
-        <div className={`bg-black w-[28px] h-[2.86px] mt-1.5`}></div>
-        <div className={`bg-black w-[28px] h-[2.86px] mt-1.5`}></div>
-        <div className={`bg-black w-[28px] h-[2.86px] mt-1.5`}></div>
+        <div className="flex flex-row items-center">
+          <p className="hidden lg:flex mt-2">Menú</p>
+          <div className="flex flex-col px-3">
+            <div className={`bg-black w-[28px] h-[2.86px] mt-1.5`}></div>
+            <div className={`bg-black w-[28px] h-[2.86px] mt-1.5`}></div>
+            <div className={`bg-black w-[28px] h-[2.86px] mt-1.5`}></div>
+          </div>
+        </div>
         {/* Menú hamburguesa */}
         <div
           className={`flex flex-col text-lg items-end justify-end w-96 burger bg-white text-black duration-400 absolute top-16 right-0 px-5 ${
