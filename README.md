@@ -32,4 +32,4 @@ $ npm install
 $ npm run dev
 
 ```
-### Feliciationes!
+### Felicitaciones, ya estás corriendo el proyecto localmente.
