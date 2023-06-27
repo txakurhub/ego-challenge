@@ -1,5 +1,3 @@
-# ego-challenge
-
 
  <p align="center">
 <h1 style="text-align: center;">Ego Challenge</h1>
