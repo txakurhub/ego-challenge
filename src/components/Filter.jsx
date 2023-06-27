@@ -11,7 +11,7 @@ const Filter = ({ segment, setSegment }) => {
     toggleMenu();
   };
   return (
-    <div className="relative inline-block text-left w-5/12 lg:w-full">
+    <div className="relative inline-block text-left w-5/12 lg:w-full bg-white z-10">
       <div className="lg:hidden">
         <button
           type="button"

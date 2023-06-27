@@ -39,7 +39,7 @@ const CarCard = ({ name, year, price, img, id }) => {
         onClick={handleClick}
         className={`${
           isHovered ? "opacity-100" : "opacity-0"
-        } mt-2 bg-black text-white hover:opacity-70 py-2 px-4 text-lg rounded-full w-6/12 duration-300 absolute bottom-0 left-0 right-0 mx-auto`}
+        } mt-2 bg-black text-white hover:opacity-70 py-2 px-4 text-lg rounded-full w-5/12 h-10 duration-300 absolute bottom-0 left-0 right-0 mx-auto`}
       >
         Ver Modelo
       </button>

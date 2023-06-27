@@ -17,14 +17,14 @@ const Navbar = () => {
   return (
     <nav className="flex flex-row justify-between items-center h-16 relative border-b-2 border-line">
       <div className="flex flex-row gap-5 w-full">
-        <img src={logo} alt="logo" className="mr-10 px-2" />
+        <img src={logo} alt="logo" className="mr-5 px-2 lg:ml-5" />
         <div className="hidden lg:flex flex-row gap-10 items-end">
           <button
             className={`${
               active
                 ? "border-active text-active font-bold"
                 : "border-transparent"
-            } text-xl border-b-4 py-3`}
+            } text-xl border-b-4 py-3 mt-2`}
             onClick={(e) => {
               e.preventDefault(), setActive(true), navigate("/");
             }}
@@ -35,8 +35,8 @@ const Navbar = () => {
             className={`${
               !active
                 ? "border-active text-active font-bold"
-                : "border-transparent"
-            } text-xl border-b-4 py-3`}
+                : "border-transparent "
+            } text-xl border-b-4 py-3 mt-2`}
             onClick={(e) => {
               e.preventDefault(), setActive(false), navigate("/model/1");
             }}
