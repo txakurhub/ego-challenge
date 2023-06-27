@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/Logo.svg";
 import x from "../assets/x.svg";
-import { useNavigate } from "react-router-dom";
-const Navbar = ({ section, setSection }) => {
+import { useLocation, useNavigate } from "react-router-dom";
+const Navbar = () => {
   const [active, setActive] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+
   const navigate = useNavigate();
+  const location = useLocation();
+
   useEffect(() => {
-    section === 0 ? setActive(true) : setActive(false);
-  }, [section]);
+    const isActive = location.pathname.startsWith("/model/");
+    isActive ? setActive(false) : setActive(true);
+  }, [location]);
+
   return (
     <nav className="flex flex-row  justify-between items-center px-3 h-16 relative">
       <div className="flex flex-row gap-5 border-b-2 border-line w-full">
@@ -16,20 +21,20 @@ const Navbar = ({ section, setSection }) => {
         <div className="hidden lg:flex flex-row gap-10 items-end">
           <button
             className={`${
-              active ? "border-active text-active" : "border-transparent"
+              active ? "border-active text-active font-bold" : "border-transparent"
             } text-xl border-b-4 py-3`}
             onClick={(e) => {
-              e.preventDefault(), setActive(true), setSection(0), navigate("/");
+              e.preventDefault(), setActive(true), navigate("/");
             }}
           >
             Modelos
           </button>
           <button
             className={`${
-              !active ? "border-active text-active" : "border-transparent"
+              !active ? "border-active text-active font-bold" : "border-transparent"
             } text-xl border-b-4 py-3`}
             onClick={(e) => {
-              e.preventDefault(), setActive(false), setSection(1);
+              e.preventDefault(), setActive(false), navigate("/model/1");
             }}
           >
             Ficha de modelo

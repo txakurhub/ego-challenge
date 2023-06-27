@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const CarCard = ({ name, year, price, img, id, setSection }) => {
+const CarCard = ({ name, year, price, img, id }) => {
   const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
   const handleMouseEnter = () => {
@@ -12,7 +12,6 @@ const CarCard = ({ name, year, price, img, id, setSection }) => {
   };
   const handleClick = (e) => {
     e.preventDefault();
-    setSection(id);
     navigate(`/model/${id}`);
   };
   return (

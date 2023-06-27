@@ -1,0 +1,1 @@
+export const URL_MODELS = "https://challenge.egodesign.dev/api/models"

@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import axios from "axios";
-export const URL_MODELS = "https://challenge.egodesign.dev/api/models";
+import { URL_MODELS } from "../constants";
 const CarsContext = createContext({});
 
 export const useCarsData = () => {
