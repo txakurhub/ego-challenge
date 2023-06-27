@@ -14,28 +14,23 @@ Detalles importantes a tener en cuenta:
 ### 1. Clonar el proyecto
 
 ```
-
 $ git clone https://github.com/txakurhub/ego-challenge.git
-
 ```
 
 ### 2. Instalar dependencias (en el directorio raíz)
 
 ```
-
 $ npm install
-
 ```
-
 ### 3. Levantar el proyecto
 
 ```
-
 $ npm run dev
-
 ```
 ### Felicitaciones, ya estás corriendo el proyecto localmente.
 
+
+<br/>
 
 ## Ficha Técnica de Comportamientos
 Esta ficha técnica de comportamientos describe los diferentes comportamientos y funcionalidades del proyecto realizado para Ego-Challenge. Proporciona una guía detallada sobre las acciones que los usuarios pueden realizar y cómo el sistema debe responder a esas acciones.
