@@ -32,8 +32,8 @@ $ npm run dev
 
 <br/>
 
-## Ficha Técnica de Comportamientos
-Esta ficha técnica de comportamientos describe los diferentes comportamientos y funcionalidades del proyecto realizado para Ego-Challenge. Proporciona una guía detallada sobre las acciones que los usuarios pueden realizar y cómo el sistema debe responder a esas acciones.
+## Ficha Técnica
+Esta ficha técnica describe los diferentes comportamientos y funcionalidades del proyecto realizado para Ego-Challenge. Proporciona una guía detallada sobre las acciones que los usuarios pueden realizar y cómo el sistema debe responder a esas acciones.
 
 ### 1. Descripción general
 El proyecto Ego-Challenge es una aplicación web que permite a los usuarios ver y explorar sobre una colección de automóviles. Los usuarios pueden ver información detallada de cada automóvil, incluyendo su nombre, una descripción, año de fabricación, precio, una imagen representativa, features y highlights.
