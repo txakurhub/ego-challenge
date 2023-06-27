@@ -9,6 +9,7 @@ const Filter = ({ segment, setSegment }) => {
 
   const handleOptionClick = (option) => {
     setSegment(option);
+    toggleMenu();
   };
   return (
     <div className="relative inline-block text-left w-5/12">
@@ -37,7 +38,9 @@ const Filter = ({ segment, setSegment }) => {
           <div className="py-1" role="none">
             <a
               href="#"
-              className="block py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              className={`block py-2 text-black pl-2 border-line border-b-[1px] ${
+                segment === "Todos" && "bg-selected"
+              }`}
               role="menuitem"
               onClick={() => handleOptionClick("Todos")}
             >
@@ -45,7 +48,9 @@ const Filter = ({ segment, setSegment }) => {
             </a>
             <a
               href="#"
-              className="block py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              className={`block py-2 text-black pl-2 border-line border-b-[1px] ${
+                segment === "Autos" && "bg-selected"
+              }`}
               role="menuitem"
               onClick={() => handleOptionClick("Autos")}
             >
@@ -53,15 +58,19 @@ const Filter = ({ segment, setSegment }) => {
             </a>
             <a
               href="#"
-              className="block py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              className={`block py-2 text-black pl-2 border-line border-b-[1px] ${
+                segment === "Pickups y Comerciales" && "bg-selected"
+              }`}
               role="menuitem"
-              onClick={() => handleOptionClick("Pickups")}
+              onClick={() => handleOptionClick("Pickups y Comerciales")}
             >
               Pickups y Comerciales
             </a>
             <a
               href="#"
-              className="block py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              className={`block py-2 text-black pl-2 ${
+                segment === "SUVs" && "bg-selected"
+              }`}
               role="menuitem"
               onClick={() => handleOptionClick("SUVs")}
             >

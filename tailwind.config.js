@@ -8,6 +8,7 @@ export default {
         line: "#D8D8D8",
         active: "#D0021B",
         graybg: "#EFEEEF",
+        selected: "#D1D6D634"
       },
     },
   },

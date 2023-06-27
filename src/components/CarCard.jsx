@@ -6,7 +6,6 @@ const CarCard = ({ name, year, price, img }) => {
 
   useEffect(() => {
     const imgElement = document.getElementById(`car-image-${name}`);
-    console.log(imgElement?.offsetHeight);
     if (imgElement && imgElement.offsetHeight > 200) {
       setIsBigger(true);
     }

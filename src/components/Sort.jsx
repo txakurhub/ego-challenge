@@ -9,9 +9,10 @@ const Sort = ({ sorted, setSorted }) => {
 
   const handleOptionClick = (option) => {
     setSorted(option);
+    toggleMenu();
   };
   return (
-    <div className="relative inline-block text-right w-5/12">
+    <div className="relative inline-block text-left w-5/12">
       <div>
         <button
           type="button"
@@ -37,7 +38,9 @@ const Sort = ({ sorted, setSorted }) => {
           <div className="py-1" role="none">
             <a
               href="#"
-              className="block py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              className={`block py-2 text-black pl-2 border-line border-b-[1px] ${
+                sorted === "cheapest" && "bg-selected"
+              }`}
               role="menuitem"
               onClick={() => handleOptionClick("cheapest")}
             >
@@ -45,7 +48,9 @@ const Sort = ({ sorted, setSorted }) => {
             </a>
             <a
               href="#"
-              className="block py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              className={`block py-2 text-black pl-2 border-line border-b-[1px] ${
+                sorted === "expensive" && "bg-selected"
+              }`}
               role="menuitem"
               onClick={() => handleOptionClick("expensive")}
             >
@@ -53,7 +58,9 @@ const Sort = ({ sorted, setSorted }) => {
             </a>
             <a
               href="#"
-              className="block py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              className={`block py-2 text-black pl-2 border-line border-b-[1px] ${
+                sorted === "newer" && "bg-selected"
+              }`}
               role="menuitem"
               onClick={() => handleOptionClick("newer")}
             >
@@ -61,7 +68,9 @@ const Sort = ({ sorted, setSorted }) => {
             </a>
             <a
               href="#"
-              className="block py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              className={`block py-2 text-black pl-2 ${
+                sorted === "older" && "bg-selected"
+              }`}
               role="menuitem"
               onClick={() => handleOptionClick("older")}
             >
