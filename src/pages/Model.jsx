@@ -3,6 +3,7 @@ import { useCarsData } from "../context/Provider";
 import { useEffect } from "react";
 import { ModelHero } from "../components/ModelHero";
 import Slide from "../components/Slide";
+import Highlights from "../components/Highlights";
 
 const Model = () => {
   const { carDetail, getCarDetail } = useCarsData();
@@ -38,7 +39,6 @@ const Model = () => {
       ...model_features,
     ];
   }
-  console.log(slideData && slideData);
   return (
     <section className="w-full py-5 h-full mx-auto ">
       <ModelHero
@@ -48,6 +48,11 @@ const Model = () => {
         title={title}
       />
       <Slide data={slideData} />
+      <div className="flex items-center justify-center flex-col gap-5 py-20">
+        {model_highlights?.map((m, i) => (
+          <Highlights data={m} key={i} side={i % 2} />
+        ))}
+      </div>
     </section>
   );
 };

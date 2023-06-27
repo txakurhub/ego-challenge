@@ -6,7 +6,7 @@ export function removeHTMLTags(text) {
 export const ModelHero = ({ img, title, name, description }) => {
   const cleanDesc = removeHTMLTags(description);
   return (
-    <div className="w-11/12 flex flex-col items-center justify-center lg:-mt-20 lg:px-5">
+    <div className="w-11/12 flex flex-col items-center justify-center lg:-mt-20 lg:px-5 py-5 mb-5">
       <div className="w-11/12 flex flex-col lg:flex-row lg:gap-10 justify-center items-center">
         <img src={img} alt="" className="lg:w-6/12" />
         <div className="lg:w-5/12">

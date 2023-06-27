@@ -23,7 +23,7 @@ body {
   margin-top: 43px;
   color: #474747 !important;
   background-color: transparent;
-  z-index: 30;
+  z-index: 30 !important;
   opacity: "100%" !important;
 }
 
