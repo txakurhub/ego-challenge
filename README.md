@@ -6,6 +6,8 @@
 Puedes ver una versión actual del proyecto [aquí](https://ego-challenge-two.vercel.app/)
 
 ## Cómo instalarlo y correr el proyecto localmente en tres simples pasos
+- **Deberás tener instalado VSCode**
+- **Deberás tener instalado Git**
 
 ### 1. Clonar el proyecto
 
@@ -15,7 +17,7 @@ $ git clone https://github.com/txakurhub/ego-challenge.git
 
 ```
 
-### 2. Instalar dependencias
+### 2. Instalar dependencias (en el directorio raíz)
 
 ```
 
